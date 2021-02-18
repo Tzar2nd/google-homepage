@@ -90,6 +90,7 @@
             max-width: 584px;
             padding-top: 6px;
             margin: 0 auto;
+            height: 70px;
         }
         
         #search-box {
@@ -98,6 +99,7 @@
             box-shadow: none;
             border-radius: 24px;
             height: 44px;
+            outline: none;
         }
 
         #search-box:hover {
@@ -122,7 +124,7 @@
             fill: #9aa0a6;
             width: 20px;
             height: 20px;
-            margin-left: 12px;
+            margin-left: 16px;
         }
      
         #search-bar-container {
@@ -135,19 +137,87 @@
             font-size: 16px; 
             width: 484px;
             border: 0px;
+            outline: none;
         }
 
         li#mic-container {
             margin-top: -5px;
             align-items: center;
             display: flex;
-            padding: 0 8px;
+            padding: 0 16px 0 0;
         }
         #mic {
             width: 24px;
             height: 24px;
         }
 
+        .search-button {
+            background-color: #f8f9fa;
+            border: 1px solid #f8f9fa;
+            border-radius: 4px;
+            color: #3c4043;
+            font-family: arial,sans-serif;
+            font-size: 14px;
+            margin: 24px 4px;
+            padding: 0 16px;
+            line-height: 27px;
+            height: 36px;
+            min-width: 54px;
+            text-align: center;
+            cursor: pointer;
+            user-select: none;
+            outline: none;
+        }
+
+        .search-button:hover {
+            box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
+            background-color: #f8f9fa;
+            border: 1px solid #dadce0;
+            color: #202124;
+        }
+
+        #google-language {
+            height: 28px;
+            display: block;
+            font-size: small;
+            text-align: center;
+        }
+        
+        footer {
+            position: fixed;
+            bottom: 0;
+            border: 0;
+            margin: 0;
+            justify-content: space-evenly;
+            width: 100%;
+        }
+
+        #footer-container {
+            background: #f2f2f2;
+            border-top: 1px solid #dadce0;
+            color: rgba(0,0,0,.54);
+        }
+
+        .bottom-link {
+            color: #70757a;
+            display: block;
+            padding: 12px;
+            white-space: nowrap;
+            font-size: 14px;
+            font-family: arial,sans-serif;
+        }
+
+        .li-right {
+            float: right;
+        }
+
+        #footer-first {
+            margin-left: 0px;
+        }
+
+        #footer-last {
+            margin-right: 52px;
+        }
 
     </style>
 </head>
@@ -211,10 +281,31 @@
                 </li>
             </ul>
         </div>
+        <div id='search-container'>
+            <center>
+                <input class='search-button' type="submit" value="Google Search">
+                <input class='search-button' type="submit" value="I'm Feeling Lucky">
+            </center>
+        </div>
+        <div id='google-language'>
+            Google offered in:  <a href="#" style="color:#1a0dab">Italiano</a>
+        </div>
 
     </div>
 </body>
 <footer>
+<div id="footer-container">
+    <ul>
 
+        <li id="footer-first"><a href="#" class="bottom-link">About</a></li>
+        <li><a href="#" class="bottom-link">Advertising</a></li>
+        <li><a href="#" class="bottom-link">Business</a></li>
+        <li><a href="#" class="bottom-link">How Search works</a></li>
+
+        <li id="footer-last" class="li-right"><a href="#" class="bottom-link">Settings</a></li>
+        <li class="li-right"><a href="#" class="bottom-link">Terms</a></li>
+        <li class="li-right"><a href="#" class="bottom-link">Privacy</a></li>
+    </ul>
+</div>
 </footer>
 </html>
